@@ -56,6 +56,8 @@ services:
   telegram_bot_server:
     build: ./telegram_bot
     command: python flask_server.py
+    ports:
+      - "5555:5555"
     env_file:
       - ./.env
     depends_on:
